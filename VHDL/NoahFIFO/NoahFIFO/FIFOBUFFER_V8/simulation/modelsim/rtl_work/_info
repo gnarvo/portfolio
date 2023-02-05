@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Noah Harvey/Downloads/OneDrive_2020-05-10 (1)/FOR SUBMISSION/NoahFIFO/FIFOBUFFER_V8/simulation/modelsim
+Efifo
+Z1 w1589141953
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z6 8C:/Users/Noah Harvey/Downloads/OneDrive_2020-05-10 (1)/FOR SUBMISSION/NoahFIFO/FIFOBUFFER_V8/FIFO.vhd
+Z7 FC:/Users/Noah Harvey/Downloads/OneDrive_2020-05-10 (1)/FOR SUBMISSION/NoahFIFO/FIFOBUFFER_V8/FIFO.vhd
+l0
+L6
+VElDX_JCC`aVW662PMonP@2
+!s100 gXzYjLO3<le0_?YbOW=mi0
+Z8 OV;C;10.5b;63
+31
+Z9 !s110 1589142228
+!i10b 1
+Z10 !s108 1589142228.000000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/Noah Harvey/Downloads/OneDrive_2020-05-10 (1)/FOR SUBMISSION/NoahFIFO/FIFOBUFFER_V8/FIFO.vhd|
+Z12 !s107 C:/Users/Noah Harvey/Downloads/OneDrive_2020-05-10 (1)/FOR SUBMISSION/NoahFIFO/FIFOBUFFER_V8/FIFO.vhd|
+!i113 1
+Z13 o-93 -work work
+Z14 tExplicit 1 CvgOpt 0
+Afifoarch
+R2
+R3
+R4
+R5
+DEx4 work 4 fifo 0 22 ElDX_JCC`aVW662PMonP@2
+l73
+L48
+V[kU7Wj7n__3@Hj<Y2UM@K2
+!s100 I41ez<VV>VMSi03b10j@23
+R8
+31
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Etestbench
+Z15 w1589142000
+Z16 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R4
+R5
+R0
+Z17 8C:/Users/Noah Harvey/Downloads/OneDrive_2020-05-10 (1)/FOR SUBMISSION/NoahFIFO/FIFOBUFFER_V8/simulation/modelsim/FIFO.vht
+Z18 FC:/Users/Noah Harvey/Downloads/OneDrive_2020-05-10 (1)/FOR SUBMISSION/NoahFIFO/FIFOBUFFER_V8/simulation/modelsim/FIFO.vht
+l0
+L31
+VCMc==Yg3?@3F?<O6kmWbO0
+!s100 ^OPaiZ6I_i2ARHlNnL5:63
+R8
+31
+Z19 !s110 1589142234
+!i10b 1
+Z20 !s108 1589142234.000000
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/Noah Harvey/Downloads/OneDrive_2020-05-10 (1)/FOR SUBMISSION/NoahFIFO/FIFOBUFFER_V8/simulation/modelsim/FIFO.vht|
+Z22 !s107 C:/Users/Noah Harvey/Downloads/OneDrive_2020-05-10 (1)/FOR SUBMISSION/NoahFIFO/FIFOBUFFER_V8/simulation/modelsim/FIFO.vht|
+!i113 1
+R13
+R14
+Abehavior
+R16
+R4
+R5
+Z23 DEx4 work 9 testbench 0 22 CMc==Yg3?@3F?<O6kmWbO0
+l91
+L34
+Z24 V<Sf9aA;<n;Y6me4T7_TMX3
+Z25 !s100 V3B3bE@YJ?gzkB9Ff>9Qa2
+R8
+31
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R13
+R14

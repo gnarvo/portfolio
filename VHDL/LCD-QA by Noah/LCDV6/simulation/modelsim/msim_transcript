@@ -1,0 +1,253 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do LCDV1_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:08:35 on Apr 25,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity LCD
+# -- Compiling architecture V1 of LCD
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(30): near "signal": (vcom-1576) expecting ';'.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(40): Illegal target for signal assignment.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(40): (vcom-1136) Unknown identifier "clk".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(40): (vcom-1136) Unknown identifier "clk".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(41): (vcom-1136) Unknown identifier "clk".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(42): (vcom-1136) Unknown identifier "clk".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(42): Expression is not a signal.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(44): (vcom-1136) Unknown identifier "clk".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(56): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(56): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(56): ** Error: (vcom-1590) Bad expression in left operand of infix expression 'and'.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(56): ** Error: (vcom-1590) Bad expression in right operand of infix expression 'and'.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(56): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(103): (vcom-1136) Unknown identifier "clk".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(103): Expression is not a signal.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(105): (vcom-1136) Unknown identifier "clk".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(113): Illegal target for signal assignment.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(113): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(127): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(127): Type error resolving infix expression "<" as type std.STANDARD.BOOLEAN.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(128): Illegal target for signal assignment.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(128): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(128): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(129): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(129): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(129): ** Error: (vcom-1590) Bad expression in left operand of infix expression 'and'.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(129): ** Error: (vcom-1590) Bad expression in right operand of infix expression 'and'.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(129): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(131): Illegal target for signal assignment.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(131): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(131): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(132): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(132): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(132): ** Error: (vcom-1590) Bad expression in left operand of infix expression 'and'.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(132): ** Error: (vcom-1590) Bad expression in right operand of infix expression 'and'.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(132): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(134): Illegal target for signal assignment.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(134): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(134): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(135): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(135): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(135): ** Error: (vcom-1590) Bad expression in left operand of infix expression 'and'.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(135): ** Error: (vcom-1590) Bad expression in right operand of infix expression 'and'.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(135): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(137): Illegal target for signal assignment.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(137): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(137): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(210): VHDL Compiler exiting
+# End time: 17:08:37 on Apr 25,2020, Elapsed time: 0:00:02
+# Errors: 48, Warnings: 0
+# ** Error: C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./LCDV1_run_msim_rtl_vhdl.do line 8
+# C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd}"
+vcom -reportprogress 300 -work work {C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/simulation/modelsim/LCD.vht}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:24:26 on Apr 25,2020
+# vcom -reportprogress 300 -work work C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/simulation/modelsim/LCD.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LCD_vhd_tst
+# -- Compiling architecture LCD_arch of LCD_vhd_tst
+# End time: 17:24:27 on Apr 25,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript work.lcd_vhd_tst
+# vsim -gui -l msim_transcript work.lcd_vhd_tst 
+# Start time: 17:24:41 on Apr 25,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.lcd_vhd_tst(lcd_arch)
+# ** Error: (vsim-3173) Entity 'C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/simulation/modelsim/rtl_work.lcd' has no architecture.
+# Load interrupted
+# Error loading design
+# End time: 17:24:42 on Apr 25,2020, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work {C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:24:52 on Apr 25,2020
+# vcom -reportprogress 300 -work work C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity LCD
+# -- Compiling architecture V1 of LCD
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(30): near "signal": (vcom-1576) expecting ';'.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(40): Illegal target for signal assignment.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(40): (vcom-1136) Unknown identifier "clk".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(40): (vcom-1136) Unknown identifier "clk".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(41): (vcom-1136) Unknown identifier "clk".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(42): (vcom-1136) Unknown identifier "clk".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(42): Expression is not a signal.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(44): (vcom-1136) Unknown identifier "clk".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(56): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(56): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(56): ** Error: (vcom-1590) Bad expression in left operand of infix expression 'and'.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(56): ** Error: (vcom-1590) Bad expression in right operand of infix expression 'and'.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(56): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(103): (vcom-1136) Unknown identifier "clk".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(103): Expression is not a signal.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(105): (vcom-1136) Unknown identifier "clk".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(113): Illegal target for signal assignment.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(113): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(127): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(127): Type error resolving infix expression "<" as type std.STANDARD.BOOLEAN.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(128): Illegal target for signal assignment.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(128): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(128): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(129): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(129): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(129): ** Error: (vcom-1590) Bad expression in left operand of infix expression 'and'.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(129): ** Error: (vcom-1590) Bad expression in right operand of infix expression 'and'.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(129): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(131): Illegal target for signal assignment.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(131): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(131): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(132): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(132): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(132): ** Error: (vcom-1590) Bad expression in left operand of infix expression 'and'.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(132): ** Error: (vcom-1590) Bad expression in right operand of infix expression 'and'.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(132): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(134): Illegal target for signal assignment.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(134): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(134): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(135): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(135): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(135): ** Error: (vcom-1590) Bad expression in left operand of infix expression 'and'.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(135): ** Error: (vcom-1590) Bad expression in right operand of infix expression 'and'.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(135): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(137): Illegal target for signal assignment.
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(137): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(137): (vcom-1136) Unknown identifier "clk_F_done".
+# ** Error: C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd(210): VHDL Compiler exiting
+# End time: 17:24:52 on Apr 25,2020, Elapsed time: 0:00:00
+# Errors: 48, Warnings: 0
+vcom -reportprogress 300 -work work {C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:26:31 on Apr 25,2020
+# vcom -reportprogress 300 -work work C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity LCD
+# -- Compiling architecture V1 of LCD
+# End time: 17:26:31 on Apr 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript work.lcd_vhd_tst
+# vsim -gui -l msim_transcript work.lcd_vhd_tst 
+# Start time: 17:28:51 on Apr 25,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.lcd_vhd_tst(lcd_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.lcd(v1)
+add wave -position end sim:/lcd_vhd_tst/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: tomwe  Hostname: LAPTOP-7FVH760N  ProcessID: 1732
+#           Attempting to use alternate WLF file "./wlft5bx4xh".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft5bx4xh
+run -all
+quit -sim
+# End time: 17:31:10 on Apr 25,2020, Elapsed time: 0:02:19
+# Errors: 0, Warnings: 2
+vsim -gui -l msim_transcript work.lcd_vhd_tst
+# vsim -gui -l msim_transcript work.lcd_vhd_tst 
+# Start time: 17:31:39 on Apr 25,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.lcd_vhd_tst(lcd_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.lcd(v1)
+add wave -position end sim:/lcd_vhd_tst/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: tomwe  Hostname: LAPTOP-7FVH760N  ProcessID: 1732
+#           Attempting to use alternate WLF file "./wlft8yb83v".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft8yb83v
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run -all
+vcom -reportprogress 300 -work work {C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/simulation/modelsim/LCD.vht}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:40:41 on Apr 25,2020
+# vcom -reportprogress 300 -work work C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/simulation/modelsim/LCD.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LCD_vhd_tst
+# -- Compiling architecture LCD_arch of LCD_vhd_tst
+# End time: 17:40:41 on Apr 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+quit -sim
+vsim -gui -l msim_transcript work.lcd_vhd_tst
+# End time: 17:41:00 on Apr 25,2020, Elapsed time: 0:09:21
+# Errors: 0, Warnings: 2
+# vsim -gui -l msim_transcript work.lcd_vhd_tst 
+# Start time: 17:41:02 on Apr 25,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.lcd_vhd_tst(lcd_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.lcd(v1)
+add wave -position end sim:/lcd_vhd_tst/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: tomwe  Hostname: LAPTOP-7FVH760N  ProcessID: 1732
+#           Attempting to use alternate WLF file "./wlfty7841y".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfty7841y
+run -all
+# End time: 17:44:23 on Apr 25,2020, Elapsed time: 0:03:21
+# Errors: 0, Warnings: 2

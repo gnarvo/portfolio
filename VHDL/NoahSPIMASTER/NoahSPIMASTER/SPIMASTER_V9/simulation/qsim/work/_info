@@ -1,0 +1,147 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Noah Harvey/Desktop/SPIMASTER - OLDVERSION/simulation/qsim
+Ehard_block
+Z0 w1587992277
+Z1 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
+Z3 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z6 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
+Z7 dC:/Users/Noah Harvey/Desktop/SPIMASTER - V3/simulation/qsim
+Z8 8SPIMASTER.vho
+Z9 FSPIMASTER.vho
+l0
+L34
+VOgIg9T_BR7joedFDVM>H13
+!s100 A`ID_i56<Ua56=ZD=[EG=2
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1587992280
+!i10b 1
+Z12 !s108 1587992280.000000
+Z13 !s90 -work|work|SPIMASTER.vho|
+Z14 !s107 SPIMASTER.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R1
+R2
+R3
+R4
+R5
+R6
+DEx4 work 10 hard_block 0 22 OgIg9T_BR7joedFDVM>H13
+l64
+L50
+V`^CmQg<48W[ez[JL_5@Yn2
+!s100 2S?JL;LJ@<3:BHXTNcXS]3
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Espimaster
+R0
+R2
+R6
+R1
+Z17 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+R3
+R4
+R5
+Z18 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R7
+R8
+R9
+l0
+L79
+VPnZ<kT:dE>_a_a^KH>CIO0
+!s100 mYAiIKneTZTIb4bg_g20Q0
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R2
+R6
+R1
+R17
+R3
+R4
+R5
+R18
+DEx4 work 9 spimaster 0 22 PnZ<kT:dE>_a_a^KH>CIO0
+l209
+L121
+V@TzahLz_iJ47V?R[I_IOe3
+!s100 KPdiO^8iKkfJJbIFP5B`11
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Espimaster_vhd_vec_tst
+Z19 w1587992274
+R4
+R5
+R7
+Z20 8Waveform2.vwf.vht
+Z21 FWaveform2.vwf.vht
+l0
+L31
+V=[98EN6?4d^hmd;g>GkID1
+!s100 EUKYN<FTO4d6]Sigkd9L30
+R10
+32
+R11
+!i10b 1
+R12
+Z22 !s90 -work|work|Waveform2.vwf.vht|
+Z23 !s107 Waveform2.vwf.vht|
+!i113 1
+R15
+R16
+Aspimaster_arch
+R4
+R5
+Z24 DEx4 work 21 spimaster_vhd_vec_tst 0 22 =[98EN6?4d^hmd;g>GkID1
+l60
+L33
+ViecDK]nUR;NiYEO?aMB;=0
+!s100 U0Z_dQADhNG6S^@hP?>dk0
+R10
+32
+R11
+!i10b 1
+R12
+R22
+R23
+!i113 1
+R15
+R16

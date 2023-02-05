@@ -1,0 +1,30 @@
+function [XRT0, XRT2] = XFunctions()
+
+%FRAME 1 TO 0 HAS A ROTATION OF -90 DEGREES IN THE X-AXIS
+theta0 = -90;
+
+%TRANSLATION IN THE X-AXIS
+Tx0 = 29.5;
+%TRANSLATION IN THE Y-AXIS
+Ty0 = 108;
+%TRANSLATION IN THE Z-AXIS
+Tz0 = 0;
+
+%HOMOGENEOUS OUTPUT FOR FRAME 1 TO 0
+XRT0 = [1 0 0 Tx0; 0 cos(theta0) -sin(theta0) Ty0; -sin(theta0) 0 cos(theta0) Tz0; 0 0 0 1];
+
+
+%FRAME 3 TO 2 HAS A ROTATION OF -90 DEGREES IN THE X-AXIS
+theta2 = -90;
+
+%TRANSLATION IN THE X-AXIS
+Tx2 = 0;
+%TRANSLATION IN THE Y-AXIS
+Ty2 = 0;
+%TRANSLATION IN THE Z-AXIS
+Tz2 = 120;
+
+%HOMOGENEOUS OUTPUT FOR FRAME 1 TO 0
+XRT2 = [1 0 0 Tx2; 0 cos(theta2) -sin(theta2) Ty2; -sin(theta2) 0 cos(theta2) Tz2; 0 0 0 1];
+
+end

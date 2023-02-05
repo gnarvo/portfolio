@@ -1,0 +1,193 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "DATA_OUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[14]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OUT[15]",
+					"strict" : false
+				},
+				{
+					"name" : "EMPTY",
+					"strict" : false
+				},
+				{
+					"name" : "FULL",
+					"strict" : false
+				},
+				{
+					"name" : "ALMOST_EMPTY",
+					"strict" : false
+				},
+				{
+					"name" : "ALMOST_FULL",
+					"strict" : false
+				},
+				{
+					"name" : "ILLEGAL",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_COUNT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_COUNT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_COUNT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_COUNT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_COUNT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RD_EN",
+					"strict" : false
+				},
+				{
+					"name" : "WR_EN",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "RST",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN[14]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN[15]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

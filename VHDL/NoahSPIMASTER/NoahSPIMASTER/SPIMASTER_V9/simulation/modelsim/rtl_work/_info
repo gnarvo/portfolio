@@ -1,0 +1,99 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Noah Harvey/Downloads/OneDrive_2020-05-10 (1)/FOR SUBMISSION/NoahSPIMASTER/SPIMASTER_V9/simulation/modelsim
+Espi_master_tb
+Z1 w1589140307
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/Noah Harvey/Downloads/OneDrive_2020-05-10 (1)/FOR SUBMISSION/NoahSPIMASTER/SPIMASTER_V9/simulation/modelsim/SPIMASTER.vht
+Z6 FC:/Users/Noah Harvey/Downloads/OneDrive_2020-05-10 (1)/FOR SUBMISSION/NoahSPIMASTER/SPIMASTER_V9/simulation/modelsim/SPIMASTER.vht
+l0
+L31
+V^IT819;K]m6WX=k29UJD=3
+!s100 N<GAYMT^Bc35__bQF7<af1
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1589140628
+!i10b 1
+Z9 !s108 1589140628.000000
+Z10 !s90 -reportprogress|300|-work|work|C:/Users/Noah Harvey/Downloads/OneDrive_2020-05-10 (1)/FOR SUBMISSION/NoahSPIMASTER/SPIMASTER_V9/simulation/modelsim/SPIMASTER.vht|
+Z11 !s107 C:/Users/Noah Harvey/Downloads/OneDrive_2020-05-10 (1)/FOR SUBMISSION/NoahSPIMASTER/SPIMASTER_V9/simulation/modelsim/SPIMASTER.vht|
+!i113 1
+Z12 o-work work
+Z13 tExplicit 1 CvgOpt 0
+Atb
+Z14 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z15 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z16 DEx4 work 9 spimaster 0 22 gG4eWB1odC3]<Ao_fT<]]2
+R2
+R3
+R4
+DEx4 work 13 spi_master_tb 0 22 ^IT819;K]m6WX=k29UJD=3
+l59
+L34
+V7>@^Hf4_J[ZZo>OkGkXUN0
+!s100 hW8=HIinO989X>^hODKGY1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Espimaster
+Z17 w1589140513
+R14
+R15
+R2
+R3
+R4
+R0
+Z18 8C:/Users/Noah Harvey/Downloads/OneDrive_2020-05-10 (1)/FOR SUBMISSION/NoahSPIMASTER/SPIMASTER_V9/SPIMASTER.vhd
+Z19 FC:/Users/Noah Harvey/Downloads/OneDrive_2020-05-10 (1)/FOR SUBMISSION/NoahSPIMASTER/SPIMASTER_V9/SPIMASTER.vhd
+l0
+L10
+VgG4eWB1odC3]<Ao_fT<]]2
+!s100 S?`GF3c=aX1@oIa0Z?j2c2
+R7
+31
+Z20 !s110 1589140607
+!i10b 1
+Z21 !s108 1589140607.000000
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/Noah Harvey/Downloads/OneDrive_2020-05-10 (1)/FOR SUBMISSION/NoahSPIMASTER/SPIMASTER_V9/SPIMASTER.vhd|
+Z23 !s107 C:/Users/Noah Harvey/Downloads/OneDrive_2020-05-10 (1)/FOR SUBMISSION/NoahSPIMASTER/SPIMASTER_V9/SPIMASTER.vhd|
+!i113 1
+Z24 o-93 -work work
+R13
+Aspiarch
+R14
+R15
+R2
+R3
+R4
+R16
+l61
+L35
+VXoU:H>R1EMI]fA:Cihmi`1
+!s100 6i_g`=GC[=;D2`lWY;XPE2
+R7
+31
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R24
+R13

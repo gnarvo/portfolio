@@ -1,0 +1,9 @@
+
+State Machine - |LCD|State
+Name State.RESET_screen State.DATA State.ENTRY State.CLEAR_LCD State.DISPLAY State.FUNCTION_LINE 
+State.FUNCTION_LINE 0 0 0 0 0 0 
+State.DISPLAY 0 0 0 0 1 1 
+State.CLEAR_LCD 0 0 0 1 0 1 
+State.ENTRY 0 0 1 0 0 1 
+State.DATA 0 1 0 0 0 1 
+State.RESET_screen 1 0 0 0 0 1 

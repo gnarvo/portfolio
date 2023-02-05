@@ -1,0 +1,165 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "CS",
+					"strict" : false
+				},
+				{
+					"name" : "START_TX",
+					"strict" : false
+				},
+				{
+					"name" : "RX_DATA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RX_DATA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RX_DATA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RX_DATA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RX_DATA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RX_DATA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RX_DATA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RX_DATA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "RX_DATA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "RX_DATA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "RX_DATA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "RX_DATA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "RX_DATA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "RX_DATA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "RX_DATA[14]",
+					"strict" : false
+				},
+				{
+					"name" : "RX_DATA[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SPI_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "TX_DV",
+					"strict" : false
+				},
+				{
+					"name" : "RX_DV",
+					"strict" : false
+				},
+				{
+					"name" : "RST",
+					"strict" : false
+				},
+				{
+					"name" : "TX_DATA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "TX_DATA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "TX_DATA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "TX_DATA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "TX_DATA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "TX_DATA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "TX_DATA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "TX_DATA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "TX_DATA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "TX_DATA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "TX_DATA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "TX_DATA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "TX_DATA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "TX_DATA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "TX_DATA[14]",
+					"strict" : false
+				},
+				{
+					"name" : "TX_DATA[15]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

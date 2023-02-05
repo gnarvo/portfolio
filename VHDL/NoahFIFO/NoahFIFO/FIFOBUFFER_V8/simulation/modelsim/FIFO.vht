@@ -1,0 +1,192 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+
+-- ***************************************************************************
+-- This file contains a Vhdl test bench template that is freely editable to   
+-- suit user's needs .Comments are provided in each section to help the user  
+-- fill out necessary details.                                                
+-- ***************************************************************************
+-- Generated on "03/29/2020 17:28:55"
+                                                            
+-- Vhdl Test Bench template for design  :  FIFO
+-- 
+-- Simulation tool : ModelSim-Altera (VHDL)
+-- 
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+
+ENTITY testbench IS
+END testbench;
+
+ARCHITECTURE behavior OF testbench IS 
+
+	COMPONENT fifo
+		generic(
+			DATA_WIDTH : integer  := 16; --16-bits of data
+			DEPTH : integer  := 16; --depth of the fifo
+			--defined as 16 purely for the testbench
+			--ideally this would be much larger
+		
+			--consider defining flags here
+			--v for defining the value at which we consider the fifo to be almost empty/full
+			vA_F	: integer 	:= 1;	-- fifo flag for almost full regs away from empty fifo
+			vA_E	: integer	:= 1;	-- fifo regs away from empty fifo
+		
+			ADDR_WIDTH : integer  := 4 --address width, USED FOR COUNTING BYTES
+			);
+		port( 
+			CLK : in std_logic;
+			RST : in std_logic;
+			
+			--DATA
+			DATA_IN : in std_logic_vector((DATA_WIDTH-1) downto 0); 
+			DATA_OUT: out std_logic_vector((DATA_WIDTH-1) downto 0); 
+			
+			--ENABLES
+			RD_EN : in std_logic; 		-- read enable 
+			WR_EN : in std_logic; 		-- write enable 
+			
+			--FLAGS
+			EMPTY : out std_logic; 
+			FULL : out std_logic;
+			
+			--very important to differentiate between the values and the ports
+	  		ALMOST_EMPTY		: out std_logic; --p for defining in the port as output
+			ALMOST_FULL 		: out std_logic; --p for defining in the port as output
+			ILLEGAL	: out std_logic; --error output
+			
+			--UPGRADED TO INCLUDE A COUNT
+			DATA_COUNT : out std_logic_vector(ADDR_WIDTH downto 0)
+			);
+	END COMPONENT;
+
+	SIGNAL CLK : std_logic;
+	SIGNAL RST : std_logic;
+	SIGNAL RD_EN : std_logic;
+	SIGNAL WR_EN : std_logic;
+	SIGNAL DATA_IN : std_logic_vector(15 downto 0);
+	SIGNAL DATA_OUT : std_logic_vector(15 downto 0);
+	SIGNAL DATA_COUNT : std_logic_vector(4 downto 0);
+	SIGNAL EMPTY : std_logic;
+	SIGNAL ILLEGAL : std_logic;
+	SIGNAL FULL : std_logic;
+	SIGNAL ALMOST_EMPTY : std_logic;
+	SIGNAL ALMOST_FULL : std_logic;	
+	
+	constant PERIOD : time := 20 ns;
+
+BEGIN
+	uut: FIFO PORT MAP(
+		clk => clk,
+		rst => rst,
+		rd_en => rd_en,
+		wr_en => wr_en,
+		data_in => data_in,
+		data_out => data_out,
+		data_count => data_count,
+		empty => empty,
+		almost_empty => almost_empty,
+		almost_full => almost_full,
+		illegal => illegal,
+		full => full
+	);
+
+	--50MHz
+	CLOCK: PROCESS
+	BEGIN
+		CLK<= '1';
+		WAIT FOR PERIOD/2;
+		CLK <= '0';
+		WAIT FOR PERIOD/2;
+
+	END PROCESS;
+
+
+   RUN : PROCESS
+   BEGIN
+--change timings to us rather than ns
+		--SET UP
+		--set read enable low, wait, set write enable low
+		RST <= '0';
+		RD_EN <= '0';
+		wait for 50 ns;
+		RST <= '1';
+   		WR_EN <= '0';
+		wait for 100 ns; --start up delay
+		--------------------------------------------------------------
+		--TEST THE WRITE PROCESS
+		--write enable goes high, data is loaded onto data_in,
+		--wait, write enable goes low, wait
+		for EXECUTE in 0 to 4 loop --write 5 values in
+			--wait for 20 us;
+			WR_EN <= '1';
+			DATA_IN <= std_logic_vector(to_unsigned(EXECUTE,16));
+			wait for 20 ns;
+			WR_EN <= '0';
+			wait for 20 ns;		
+		end loop;	
+		--------------------------------------------------------------
+		--TEST THE READ PROCESS
+		--read enable goes high, wait, read enable goes low, wait
+		for EXECUTE in 0 to 4 loop --read 5 values out
+			RD_EN <= '1';
+			wait for 20 ns;
+			RD_EN <= '0';
+			wait for 20 ns;		
+		end loop;	
+		--------------------------------------------------------------
+		--TEST BOTH READ AND WRITE
+		--write enable high, data loaded onto data_in, read enable
+		--goes high, wait, write enable goes low, read enable goes
+		--low, wait 	
+		for EXECUTE in 0 to 4 loop --5 in, 5 out
+			WR_EN <= '1';
+			DATA_IN <= std_logic_vector(to_unsigned(EXECUTE,16));
+			wait for 20 ns;
+			RD_EN <= '1';
+			WR_EN <= '0';
+			wait for 20 ns;
+			WR_EN <= '0';
+			RD_EN <= '0';	
+			wait for 20 ns;		
+		end loop;
+		--------------------------------------------------------------
+		--FIFO IS NOW EMPTY
+		wait for 200 ns; -- a delay to space out tests
+		--------------------------------------------------------------
+		--ILLEGAL READ
+	  	--perform 10 reads when there's no data inside the fifo
+		for EXECUTE in 0 to 9 loop --attempt to read 10 values out
+			RD_EN <= '1';
+			wait for 20 ns;
+			RD_EN <= '0';	
+			wait for 20 ns;	
+		end loop;	
+		--------------------------------------------------------------
+		--ILLEGAL WRITE
+		--perform 25 writes to witness the fifo being filled
+		wait for 100 ns; 	
+		for EXECUTE in 0 to 24 loop
+			WR_EN <= '1';
+			DATA_IN <= std_logic_vector(to_unsigned(EXECUTE,16));
+			wait for 20 ns;
+			WR_EN <= '0';
+			wait for 20 ns;		
+		end loop;
+		--------------------------------------------------------------
+      wait; 
+   END PROCESS RUN;
+END;

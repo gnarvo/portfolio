@@ -1,0 +1,84 @@
+LCD Version one complete by Tom on 08/03/20
+
+contents of LCD version 1
+- Code to send received chartacters to the LCD 
+- Code to decrypt the input character to the relative ASCII character
+To do in version 2
+- Check busy flag
+- Code to initiate 8 bit LCD
+
+Noah checked this on 11/03/2020
+The VHDL needs more commenting, it's best to have a step by step explanation of the process. 
+The output from the buffer is an 8 bit logic vector so we need to consider how you take this as an input.
+We need an error state for when things go wrong.
+
+
+Version two complete by Tom on 25/03/20
+Contents of LCD version 2
+-Check busy flag added
+-Initiation code added
+-problems ran into when portmapping Busy flag and chacracter choice
+-Busyflag and character choice code dubugged so problem is with the portmapping
+to be done in version 3
+-move all code to seperate VHDL files
+-Portmap all code to aid in debugging.
+
+checks to be done by Noah on 26/03/2020
+Looks very tidy and easy to understand. Having the code in seperate files helps a lot.
+
+
+Version three complete by Tom and Oscar on 14/04/20
+Content of LCD verstion 3
+-  Everything moved to main LCD File to fix portmapping issue
+-  Changed character choice code
+to be done in version 4
+-  Comment code more thoroughly
+-  change to a state machine format to make initialisation trigger
+
+checks to be done by Noah on 14/04/2020 
+We had a group call, Tom shared his code and Oscar checked it too. 
+Any new changes that we made should be commented thoroughly, noting what
+was Oscar's input too.
+
+
+Version four complete by Tom on 18/04/20
+Content of LCD verstion 4
+-  changed to state machine format
+-  initialisation now works
+to be done in version 5
+-  comment more
+-  remove unnecessary previous code
+-  work on enable triggering and timing
+
+checks to be done by Noah on 20/04/2020
+Looks good but I agree with suggestions for version 5. 
+Very close to finishing now.
+
+
+Version five complete by Tom on 21/04/20
+Content of LCD verstion 5
+-  Enable triggers for 10 us 
+-  3 ms delay in place of the wait busy like instructed
+-  all signals trigger at expected times
+-  state machine format works perfectly
+to be done in version 6
+-  Comment code more thoroughly
+
+checks to be done by Noah on 24/04/2020
+Still needs to be commmented. May be worth going on call, sharing code
+and running us through it step by step to know where commenting is needed.
+You also need to make sure that your indentation is correct throughout. 
+Label the signals and variables so that anyone can understand what they do.
+
+
+Version six complete by Tom on 25/04/20
+Content of LCD verstion 6
+-  Enable triggers for 10 us 
+-  3 ms delay in place of the wait busy like instructed
+-  all signals trigger at expected times
+-  state machine format works perfectly
+- thorough TestBench
+- commented code
+
+checks to be done by Noah on 26/04/2020
+code looks complete with a good testbench, ready to submit.

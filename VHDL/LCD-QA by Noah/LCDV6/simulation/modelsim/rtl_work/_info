@@ -1,0 +1,90 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/simulation/modelsim
+Elcd
+Z1 w1587831987
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd
+Z6 FC:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd
+l0
+L6
+V_]EN<oOBbJZgPG`;l^Jlo0
+!s100 Ij_0^R]mEK0dA1TfZ[gKK3
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1587831991
+!i10b 1
+Z9 !s108 1587831991.000000
+Z10 !s90 -reportprogress|300|-work|work|C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd|
+Z11 !s107 C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/LCD.vhd|
+!i113 1
+Z12 o-work work
+Z13 tExplicit 1 CvgOpt 0
+Av1
+R2
+R3
+R4
+DEx4 work 3 lcd 0 22 _]EN<oOBbJZgPG`;l^Jlo0
+l39
+L23
+VS:117__T59D13lFNmM2M90
+!s100 XP^WbC3<CSLn_dEfSE_OY2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Elcd_vhd_tst
+Z14 w1587832830
+R3
+R4
+R0
+Z15 8C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/simulation/modelsim/LCD.vht
+Z16 FC:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/simulation/modelsim/LCD.vht
+l0
+L30
+VlYlhle]67]@NU_SSM@MAm1
+!s100 MAJQNW0;4KjQ<VA8N[YbQ0
+R7
+32
+Z17 !s110 1587832841
+!i10b 1
+Z18 !s108 1587832841.000000
+Z19 !s90 -reportprogress|300|-work|work|C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/simulation/modelsim/LCD.vht|
+Z20 !s107 C:/Users/tomwe/Desktop/ELEC 241/Group/LCD/LCDV6/simulation/modelsim/LCD.vht|
+!i113 1
+R12
+R13
+Alcd_arch
+R3
+R4
+Z21 DEx4 work 11 lcd_vhd_tst 0 22 lYlhle]67]@NU_SSM@MAm1
+l57
+L32
+VE6fBMZOlflAVbT0^2gQJJ1
+!s100 BiinPNB=fN6JH=h]dhVz=3
+R7
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13

@@ -1,0 +1,17 @@
+BUILD
+.mbed
+mbed-os
+libuopmsb
+.DS_Store
+.DS_Store
+*.zip
+.DS_Store
+ntp-client
+drivers/COMPONENT_wifi_ism43362
+MSB-V2-V4-TEST/mbed-os
+mbed-client-for-azure/dependencies/umock-c
+mbed-client-for-azure/dependencies/parson
+mbed-client-for-azure/dependencies/c-utility
+mbed-client-for-azure/dependencies/azure-umqtt-c
+mbed-client-for-azure/dependencies/azure-macro-utils-c
+mbed-client-for-azure/azure-iot-sdk-c

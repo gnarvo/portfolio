@@ -1,0 +1,210 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+
+entity LCD is 
+	port(
+	--Inputs
+	reset 			: in std_logic;--high reset
+	Data_in			: in std_logic_vector(7 downto 0); --Data received from FIFO buffer
+	
+	
+	--outputs
+	clock				: out std_logic; -- clock output to check the intenal clock frequency is correct
+	LCD_On			: out std_logic; -- to turn the LCD on 
+	Read_Write		: out std_logic; --to read from or write to the LCD (0 is write mode)
+	Control_Data	: out std_logic; --if its Data or a command
+	Enable 			: out std_logic; --sending the date or holding it back
+	Data_out			: out std_logic_vector (7 downto 0) --Data put to the LCD
+	);
+end entity;
+
+architecture V1 of LCD is
+--setting the signal  
+type 	   state_type is (FUNCTION_LINE,DISPLAY, CLEAR_LCD, ENTRY, DATA, RESET_screen); --setting the different states
+signal   State	: state_type:=RESET_screen;	--which states code should be run
+
+signal   clk : std_logic:='1'; --setting the internal clock
+
+signal   clk_F_done : integer range 3100 downto 0 :=0 ;	--to time for the function state
+signal   clk_D_done : integer range 3100 downto 0 :=0 ;	--to time for the display state
+signal   clk_C_done : integer range 3100 downto 0 :=0 ;	--to time for the clear LCD state
+signal   clk_E_done : integer range 3100 downto 0 :=0 ;	--to time for the entry state
+signal   clk_DATA_done : integer range 3100 downto 0 :=0 ;	--to time for the data state
+
+constant Clock_Freq : integer :=1e6;		--setting the internal clocks frequency
+constant ClockPeriod: time :=1000 ms / Clock_Freq;	-- changing the frequency into a specific time interval
+
+begin
+clk<= not clk after ClockPeriod / 2; --toggeling the lcock state every half peiod so 1 period has a whole clock cycle
+clock<=clk;  --setting the internal signal to the clock output to check for timing checks
+process(clk) --enter when the clock changes
+begin
+if (rising_edge(clk)) then --only on the rising edge of te clock
+	case state is 
+		when RESET_screen=>	--the reset state
+			if reset = '1' then 
+				state<=RESET_screen; --if reset is set to high then remain in reset state
+			else
+				state<=FUNCTION_LINE;	--once reset is set from high to low then next state is to sett up function
+			end if;
+		when FUNCTION_LINE=>	--setting the function code 
+			if reset = '1' then
+				state<=RESET_screen;	--if reset is set to high then set state to reset state
+			else	
+				if clk_F_done>3030 and clk_F_done<3100 then	-- if the conditions are met state moves to display
+					state<=DISPLAY;
+				else
+					state<=FUNCTION_LINE;				--if not the state stays in function till it is met
+				end if;
+			end if;
+		when DISPLAY=>		--setting the display code
+			if reset = '1' then
+				state<=RESET_screen;  --if reset is set to high then set state to reset state
+			else	 
+				if clk_D_done>3030 and clk_D_done<3100 then --if conditions are met move to clear LCD state
+					state<=CLEAR_LCD;
+				else
+					state<=DISPLAY;	--if not stay in the display state
+				end if;
+			end if;
+		when CLEAR_LCD=>		--setting the display code
+			if reset = '1' then
+				state<=RESET_screen;  --if reset is set to high then set state to reset state
+			else	
+				if clk_C_done>3030 and clk_C_done<3100 then	--if conditions are met move to the entry state
+					state<=ENTRY;
+				else
+					state<=CLEAR_LCD;		--if not stay in clear LCD state
+				end if;
+			end if;
+		when ENTRY=>		--setting the display code
+			if reset = '1' then
+				state<=RESET_screen;  --if reset is set to high then set state to reset state
+			else	
+				if clk_E_done>3030 and clk_E_done<3100 then		--if conditions are met move to data transfer state
+					state<=DATA;
+				else
+					state<=ENTRY;		-- if not stay in entry state
+				end if;
+			end if;
+		when DATA=>		--setting the display code
+			if reset = '1' then
+				state<=RESET_screen;  --if reset is set to high then set state to reset state
+			else
+				state<= DATA;		-- no exit conditions due to set up beign complete and the remaining output info being displayed on the screen
+			end if;
+	end case;
+end if;
+end process;
+
+
+process(state, Data_in, clk)	-- enter code when there is a change in state, clock or data in
+begin
+if (rising_edge(clk)) then	-- on the rising edge of the clock
+case state is 
+	when RESET_screen =>	 		--setting the display code
+	
+		LCD_On <= '0';	--turn the LCD off
+		Data_out<="00000000";	--for purposes of simulation make output 0
+		
+		--resetting the individual timers to 0 for the next run of set-up after reset triggered
+		clk_F_done<=0;
+		clk_D_done<=0;
+		clk_C_done<=0;
+		clk_E_done<=0;
+		clk_DATA_done<=0;
+		
+	when FUNCTION_LINE =>			--setting the display code
+	
+		LCD_On<='1';	--turn the LCD on	
+
+		Control_Data <= '0';	--show its a command
+		Read_Write <= '0';	--show its being written
+		Enable <= '0';		--dont send anything yet
+
+		if (clk_F_done < 3000)then	--this is for the 3 ms delay that replaces the wait busy register
+			clk_F_done <= clk_F_done + 1;
+		elsif (clk_F_done>=3000 and clk_F_done<3010) then --when 3 ms has passed set data
+			Data_out <= "00111000" ; --initial function set up
+			clk_F_done <= clk_F_done + 1;
+		elsif (clk_F_done>=3010 and clk_F_done<3020) then	--after an additional 10 us send the data
+			Enable <='1';
+			clk_F_done<= clk_F_done+1;
+		elsif (clk_F_done>=3020 and clk_F_done<3030) then	--after another 10 us stop sending data
+			Enable <='0';
+			clk_F_done<=clk_F_done+40;	--an extream to make sure the conditon to exit is met
+		end if;
+		
+	when DISPLAY =>
+	
+		if (clk_D_done < 3000)then	--this is the 3 ms delay that replaces the wait busy register
+			clk_D_done <= clk_D_done + 1;
+		elsif (clk_D_done>=3000 and clk_D_done<3010) then	--when 3 ms pass set the data
+			Data_out <= "00001100" ; --setting display specification
+			clk_D_done <= clk_D_done + 1;
+		elsif (clk_D_done>=3010 and clk_D_done<3020) then	--after 10 us set enable pin to send the data
+			Enable <='1';
+			clk_D_done<= clk_D_done+1;
+		elsif (clk_D_done>=3020 and clk_D_done<3030) then	--after another 10 us clear enable pin
+			Enable <='0';
+			clk_D_done<=clk_D_done+40;	--an extream to make sure condition to exit is met
+		end if;
+
+
+	when CLEAR_LCD =>
+
+		if (clk_C_done < 3000)then	--this is the 3 ms delay that replaces the wait busy register
+			clk_C_done <= clk_C_done + 1;
+		elsif (clk_C_done>=3000 and clk_C_done<3010) then	--when 3 ms pass set the data
+			Data_out <= "00000001" ; --setting LCD clear
+			clk_C_done <= clk_C_done + 1;
+		elsif (clk_C_done>=3010 and clk_C_done<3020) then	--after 10 us set enable pin to send the data
+			Enable <='1';
+			clk_C_done<= clk_C_done+1;
+		elsif (clk_C_done>=3020 and clk_C_done<3030) then	--after another 10 us clear the enable pin
+			Enable <='0';
+			clk_C_done<=clk_C_done+40;	--an extream to make sure the condition to exit is met
+		end if;
+
+	when ENTRY =>
+		
+		if (clk_E_done < 3000)then	--this is the 3 ms delay that replaces the wait busy register
+			clk_E_done <= clk_E_done + 1;
+		elsif (clk_E_done>=3000 and clk_E_done<3010) then --when 3 ms pass set the data
+			Data_out <= "00000110" ; --setting entry mode
+			clk_E_done <= clk_E_done + 1;
+		elsif (clk_E_done>=3010 and clk_E_done<3020) then --after 10 us set enable pin to send the data
+			Enable <='1';
+			clk_E_done<= clk_E_done+1;
+		elsif (clk_E_done>=3020 and clk_E_done<3030) then --after another 10 us clear the enable pin
+			Enable <='0';
+			clk_E_done<=clk_E_done+40; --an extream to make sure the condition to exit is met
+		end if;
+
+	when DATA=>
+ 
+		if (clk_DATA_done < 3000)then		--this is the 3 ms delay that replaces the wait busy register
+			clk_DATA_done <= clk_DATA_done + 1;
+		elsif (clk_DATA_done>=3000 and clk_DATA_done<3010) then --when 3 ms pass set the data
+			Control_Data <= '1';
+			Read_Write <= '0' ;
+			Data_out <= Data_in ; --setting the data thats on the screen to the data input from the buffer
+			clk_DATA_done <= clk_DATA_done + 1;
+		elsif (clk_DATA_done>=3010 and clk_DATA_done<3020) then --after 10 us set enable pin to send the data
+			Enable <='1';
+			clk_DATA_done<= clk_DATA_done+1;
+		elsif (clk_DATA_done>=3020 and clk_DATA_done<3030) then --after another 10 us clear the enable pin
+			Enable <='0';
+			clk_DATA_done<=clk_DATA_done+40; --an extream to make sure the condition to exit is met
+		elsif (clk_DATA_done>3030) then
+			clk_DATA_done<=0;	--as there is no next state for the data send, the timer can be set to 0 here so it re-enters the code properly
+		end if;
+		
+	end case;
+end if;
+
+ end process;
+
+end V1;
